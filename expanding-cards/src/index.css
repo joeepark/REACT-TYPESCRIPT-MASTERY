@@ -6,25 +6,45 @@
   padding: 0;
 }
 
-
-.container {
+body {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0 5%;
 }
 
-.containers {
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+
+.cards {
   height: 80vh;
-  flex: 0.5;
-  position: relative;
   background-position: center;
   background-repeat: none;
   background-size: cover;
   cursor: pointer;
+  position: relative;
+  border-radius: 50px;
+  flex: 0.5;
+  color: white;
+  margin: 5px;
+  transition: flex 0.7s ease-in;
 }
 
-.containers .active {
-  border: 3px solid green;
+.cards h3 {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  opacity: 0;
+}
+
+.cards.active,
+.cards.active h3 {
+  flex: 4;
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.7s;
 }
