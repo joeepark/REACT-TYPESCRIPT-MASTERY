@@ -1,0 +1,2 @@
+## Here is an accumulation of micro projects for me to master React/JavaScript/TypeScript.
+The goal here is to focus on creating features/projects with React to implement responsive features and good-looking designs that are production ready.
