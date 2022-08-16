@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fefae0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+#input {
+  width: 100%;
+  height: 50px;
+  border-radius: 1em;
+  border: 1px solid #D4a373;
+  color: black;
+}
+
+#input::placeholder {
+  color: black;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+.search-bar {
+  position: relative;
+}
+
+#input:focus {
+  outline: none;
+}
+
+input[type='text'] {
+  padding-left: 75px;
+}
+
+.finder-container {
+  width: 600px;
+}
+
+.profile-container {
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid #D4a373;
+  border-radius: 1em;
+  display: flex;
+  padding: 3%;
+}
+
+.profile-picture {
+  height: 200px;
+  width: 200px;
+  border-radius: 1em;
+  margin-left: 20px;
+}
+
+.profile-info {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.profile-info h2 {
+  color: #D4a373;
+  text-shadow: 1px 1px black;
+}
+
