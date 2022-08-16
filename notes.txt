@@ -1,0 +1,9 @@
+1. Try prop drilling itemId
+2. Create an x button from React Icons
+3. Create an average rating and review counter as "FeedbackStats component"
+
+
+
+
+
+npm create vite@latest
