@@ -6,50 +6,36 @@ import image4 from '../assets/4.jpg';
 import image5 from '../assets/5.jpg';
 
 export default function Container() {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick: any = (e) => {
-    e.preventDefault();
-    setIsActive((current) => !current);
+  const [active, setActive] = useState({
+    active: null,
+    images: [image1, image2, image3, image4, image5]
+  });
+  
+  const handleClick = (index) => {
+    setActive({...active, active: active.images[index]});
   };
+
+  function activeToggle(index) {
+    if (active.images[index] === active.active) {
+      return 'cards active';
+    } else {
+      return 'cards'
+    }
+  }
+
 
   return (
     <>
-      <div
-        style={{ backgroundImage: `url(${image1})` }}
-        className={isActive ? 'cards active' : 'cards'}
-        onClick={handleClick}
-      >
-        <h3>Travel the world!</h3>
-      </div>
-      <div
-        style={{ backgroundImage: `url(${image2})` }}
-        className={isActive ? 'cards active' : 'cards'}
-        onClick={handleClick}
-      >
-        <h3>Travel the world!</h3>
-      </div>
-      <div
-        style={{ backgroundImage: `url(${image3})` }}
-        className={isActive ? 'cards active' : 'cards'}
-        onClick={handleClick}
-      >
-        <h3>Travel the world!</h3>
-      </div>
-      <div
-        style={{ backgroundImage: `url(${image4})` }}
-        className={isActive ? 'cards active' : 'cards'}
-        onClick={handleClick}
-      >
-        <h3>Travel the world!</h3>
-      </div>
-      <div
-        style={{ backgroundImage: `url(${image5})` }}
-        className={isActive ? 'cards active' : 'cards'}
-        onClick={handleClick}
-      >
-        <h3>Travel the world!</h3>
-      </div>
+      {active.images.map((image, index) => (
+        <div
+          style={{ backgroundImage: `url(${image})` }}
+          key={index}
+          className={activeToggle(index)}
+          onClick={() => handleClick(index)}
+        >
+          <h3>Travel the world!</h3>
+        </div>
+      ))}
     </>
   );
 }
