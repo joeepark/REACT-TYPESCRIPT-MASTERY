@@ -8,3 +8,11 @@ The goal here is to focus on creating features/projects with React to implement 
 <br>
 <img src="./github-finder/src/assets/github-finder-1.png">
 <img src="./github-finder/src/assets/github-finder-2.png">
+
+## Expanding Cards
+- Created clickable containers
+- Added event listeners to change the active container shown based on status
+<br>
+<img src="./expanding-cards/src/assets/expanding-cards-1.png">
+<img src="./expanding-cards/src/assets/expanding-cards-2.png">
+<img src="./expanding-cards/src/assets/expanding-cards-3.png">
